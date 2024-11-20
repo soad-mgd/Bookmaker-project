@@ -1,0 +1,132 @@
+
+body {
+  font-family: "PT Sans Caption", sans-serif;
+
+ 
+}
+
+::selection {
+  background-color: #b5b3b3;
+  color: #352e28;
+}
+
+main {
+  min-height: 100vh;
+  background-color: #E1D7C6;
+}
+
+main h1 {
+  font-size: 50px;
+  font-family: "Pacifico", cursive;
+  color: #352e28;
+  isolation: isolate;
+  position: relative;
+}
+
+main h1::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 25%;
+  left: 40%;
+  bottom: 10px;
+  background-color: #694E4E;
+  transition: height 350ms;
+  z-index: -1;
+}
+
+main h1:hover::before {
+  height: 50%;
+}
+.dashed-line {
+  margin-top: 4%;
+  border: 1px dashed #000; /* Change the color and size as needed */
+  width: 100%; /* Set the desired width */
+  height: 0;   /* Set the height to 0 for a single line */
+}
+.label-color{
+  color: #003161;
+  font-size: 20px;
+}
+.books-body  {
+  font-size: 25px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #7E8A97, #30475E);
+  font-family: "Righteous", sans-serif;
+  font-weight: 700;
+}
+.custom-container {
+  display: flex;
+  justify-content: center;
+}
+.btn-delete {
+  color: #fff; /* Text color */
+  background-color: #eb1d36; /* Background color */
+  border: 1px solid #eb1d36; /* Border color */
+}
+
+.btn-delete:hover {
+  color: #fff; /* Text color on hover */
+  background-color: #d30820; /* Darker red background on hover */
+  border-color: #ba081d; /* Darker red border on hover */
+}
+
+/* Visit Button */
+.btn-visit {
+  color: #fff; /* Text color */
+  background-color: #9eb23b; /* Background color */
+  border: 1px solid #9eb23b; /* Border color */
+}
+
+.btn-visit:hover {
+  color: #fff; /* Text color on hover */
+  background-color: #8a9e23; /* Darker green background on hover */
+  border-color: #6e8018; /* Darker green border on hover */
+}
+
+
+.box-info {
+  background-color: #0007;
+}
+
+.box-conent {
+  width: 500px;
+  z-index: 10;
+}
+
+.box-conent p {
+  font-family: "Bree Serif", serif;
+  font-size: 21px;
+  line-height: 1.3;
+  color: #352e28;
+}
+
+.rules li {
+  font-size: 18px;
+  padding-top: 10px;
+}
+.rules i {
+  color: #bb4120;
+}
+
+.circles span {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.circles span:nth-child(1) {
+  background-color: #f15f5d;
+}
+.circles span:nth-child(2) {
+  background-color: #febe2e;
+}
+.circles span:nth-child(3) {
+  background-color: #4db748;
+}
+
+.logo {
+  width: 40px;
+}
+

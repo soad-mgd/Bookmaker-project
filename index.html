@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Css/all.min.css">
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+<body>
+
+   
+    <main >
+        <div class="container "  >
+          <div class ="books-market">
+           <h1 class="py-2 text-center text-white">Bookmarker</h1>
+           <hr class="dashed-line ">
+           <h2 class="books-body text-center mt-3">
+           <i class="fa-solid fa-bookmark h2-icon"></i>
+            Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark h2-icon"></i>
+         </h2>
+         <div class="mt-5 all-inputs">
+          <label for="bookmarkName" class="pb-2 fw-semibold label-color">
+            <i class="fa-solid fa-book-bookmark pe-2 mt-4"></i>
+            Site Name</label
+          >
+          <input
+            type="text"
+            placeholder="Bookmark Name"
+            class="form-control"
+            id="bookmarkName"
+            oninput="validationInputs(this,'msgName')"
+          />
+          <p  id = "msgName" class="alert alert-danger d-none">Please enter a name with at least 3 characters for the first word. Additional words can follow, separated by spaces.</p>
+
+          <label for="bookmarkUrl" class="pb-2 fw-semibold label-color">
+            <i class="fa-solid fa-link pe-2 mt-4" ></i>
+            Site URL</label
+          >
+          <input
+            type="url"
+            placeholder="Website UR"
+            class="form-control"
+            id="bookmarkUrl"
+            oninput="validationInputs(this,'msgUrl')"
+          />
+          <p id = "msgUrl" class=" alert alert-danger d-none submitBtn">Enter a valid URL (e.g., https://www.example.com).</p>
+
+         </div>
+         <div class="custom-container">
+          <button onclick="addbook()" class="btn btn-danger mt-4 submit-button pe-5 ps-5  " type="submit" >Submit</button>
+        </div>
+        <hr class="dashed-line mt-4 ">
+         <div>
+          <table class="table mt-4 text-center bg-light">
+            <thead>
+              <th class="text-capitalize">index</th>
+              <th class="text-capitalize">Website Name</th>
+              <th class="text-capitalize">Visit</th>
+              <th class="text-capitalize">Delete</th>
+            </thead>
+            <tbody id="tableContent">
+              
+            </tbody>
+          </table>
+         </div>
+         <div
+         class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none"
+       >
+         <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+           <header
+             class="box-header w-100 d-flex justify-content-between align-items-center mb-4"
+           >
+             <div class="circles d-flex">
+               <span class="rounded-circle me-2"></span>
+               <span class="rounded-circle me-2"></span>
+               <span class="rounded-circle me-2"></span>
+             </div>
+             <button class="btn border-0" id="closeBtn">
+               <i class="fa-solid fa-xmark close fs-3"></i>
+             </button>
+           </header>
+           <p class="m-0 pb-2">
+             Site Name or Url is not valid, Please follow the rules below :
+           </p>
+           <ol class="rules list-unstyled m-0">
+             <li>
+               <i class="fa-regular fa-circle-right p-2"></i>Site name must
+               contain at least 3 characters
+             </li>
+             <li>
+               <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+               valid one
+             </li>
+           </ol>
+         </div>
+       </div>
+           
+          </div>
+        </div>
+      </main>
+
+
+
+
+
+
+    
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
